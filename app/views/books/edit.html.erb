@@ -1,0 +1,12 @@
+<% provide :title, 'Edit Page' %>
+
+<h1>
+	Editing Book 
+</h1> 
+
+<p style="color: gray; " > <%= @book.title %> </p>
+
+<%= render 'form', book: @book %>
+
+<%= link_to 'Show', @book, class: "btn-custom" %> |
+<%= link_to 'Back', books_path, class: "btn-custom" %>

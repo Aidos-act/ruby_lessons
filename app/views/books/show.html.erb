@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<% provide :title, @book.title %>
+
+<h1>
+  	<%= @book.title %>
+</h1>
+
+<p>
+  <strong>Price:</strong>
+  <%= @book.price %>
+</p>
+
+<p>
+  <strong>Publish:</strong>
+  <%= @book.publish %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @book.published %>
+</p>
+
+<p> Reviews </p>
+
+<%= render @book.reviews %>
+
+<h3 class="reply-to-msg"> Write Review</h3>
+
+<%= render 'reviews/form' %>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %> |
+<%= link_to 'Destroy', book_path(@book), method: :delete, data: { confirm: 'Are you sure?' } %>
+

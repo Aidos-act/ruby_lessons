@@ -1,0 +1,27 @@
+<%= form_for(@book) do |form| %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publish %>
+    <%= form.text_field :publish %>
+  </div>
+
+  <div class="field">
+    <%= form.label :published %>
+    <%= form.date_select :published , :start_year => 1940, :end_year => 2020 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

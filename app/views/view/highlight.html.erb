@@ -1,0 +1,6 @@
+<% msg = 'Rails is the framework of Ruby. In the frameworks there is, Catalyst and symfony.' %>
+
+<ul>
+	<li><%= highlight(msg, 'Rails') %></li>
+	<li><%= highlight(msg, ['Ruby','Catalyst'], highlighter: '<a href="https://google.com/search?q=\1">\1</a>')%></li>
+</ul>

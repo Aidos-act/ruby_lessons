@@ -1,0 +1,16 @@
+<% 
+article = <<EOL
+
+News for the Night
+
+We'll go out tonight.
+Because it is friday.
+And we want to rest our brain.
+
+<script> alert('Happy Drinking!!'); </script>
+
+EOL
+
+%>
+
+<%= simple_format(article, {class: :article}, {sanitize: false, wrapper_tag: 'blockquote'}) %>

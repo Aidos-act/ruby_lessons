@@ -1,0 +1,11 @@
+<table>
+	<tr>
+		<th>Author</th><th>AVG Price</th>
+	</tr>
+	<% @book.each do |book| %>
+		<tr>
+			<td><%= book.publish %> </td>
+			<td><%= book.avg_price.round %> ￥</td>
+		</tr>
+	<% end %>
+</table>

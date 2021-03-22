@@ -1,0 +1,3 @@
+<%= form_for(@book) do |f| %>
+<%= f.select :genre, ['Fantasy', 'Real Story', 'Life Based'], { include_blank: ''} , multiple: true %> <br/>
+<% end %>

@@ -1,0 +1,11 @@
+<table>
+	<tr>
+		<th>Author</th><th>AVG Price</th>
+	</tr>
+	<% @books.each do |key, value|%>
+		<tr>
+			<td><%= key %></td>
+			<td><%= value.round %>円</td>
+		</tr>
+	<% end %>
+</table>

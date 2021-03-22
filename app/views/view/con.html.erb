@@ -1,0 +1,21 @@
+<% money = 800 %>
+<% logged_in = true %>
+
+
+<div>
+	<% if logged_in
+		concat "Logged in"
+	else
+		concat "Log in"
+	end%>
+
+</div>
+<div>
+<%= money %>
+
+<% if money >= 1000 
+	concat image_tag 'giphy.gif' 
+else
+	concat image_tag 'loading.gif'
+end %>
+</div>

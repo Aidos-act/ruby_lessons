@@ -1,0 +1,11 @@
+<%
+msg = <<EOL
+<p	style="color:RED"> I have question <br/> about Rails. </p>
+<strong id="hoge" class="meclazz">Attention</strong>
+<a href="Javascript:alert('NG')">Please answer here.</a>
+<a href="https://www.wings.msn.to">Support Site</a>
+EOL
+%>
+<%= sanitize msg %>
+<hr/>
+<%= sanitize msg, tags: %w(p a), attributes: %w(id class href style) %>

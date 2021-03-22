@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title)%></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <%= link_to "LIBRARY" , root_path, class:'navbar-brand'%>
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li> <%= link_to "New Book", new_book_path %></li>
+    
+            <li> 
+              <div class="dropdown">
+                <p data-toggle="dropdown"  >
+                  Search
+                  <span class="caret"></span>
+                </p>
+
+                <ul class="dropdown-menu" >
+                  <%= form_tag books_path, :method => 'get' do %>
+                    <label for="keywd1">Enter book title : </label>
+                    <input type="text" name="keywd1" id="keywd1" value="" size="40"/>
+                    <input type="submit" name="commit" value="Submit" data-disable-with="search" />
+                    <%= link_to "Back", root_path , class: 'btn btn-custom'%>
+                  <% end %>
+                </ul>
+              </div>
+            </li>
+
+            <li>               
+              <div class="dropdown">
+                <p data-toggle="dropdown"  >
+                  Categories
+                  <span class="caret"></span>
+                </p>
+
+                <ul class="dropdown-menu btn-custom" >
+                  <%= form_tag books_path, :method => 'get' do %>
+                    <select name="keywd" id="keywd" >
+                      <option> Fantasy</option>
+                      <option> Life Based</option>
+                      <option> Real Story</option>
+                    </select>
+                    
+                    <input type="submit" name="commit" value="Submit" data-disable-with="search" class="btn-custom"/>
+                    <%= link_to "Back", root_path , class: 'btn btn-custom'%>
+                  <% end %>
+                </ul>
+              </div>
+            </li>
+
+            <li> <%= link_to "Tests", view_tests_path %>  </li>
+            <li> <%= link_to "Record Tests", record_index_path %></li>
+
+        </ul>
+        
+      </div>
+    </div>
+
+    <div class="container">
+      <p class="notice"><%= flash.now[notice] %></p>
+      <p class="alert"><%= flash.now[alert] %></p>
+    </div>
+
+    <%= yield %>
+
+
+
+  </body>
+</html>

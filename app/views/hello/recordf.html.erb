@@ -1,0 +1,30 @@
+<h1>Books Cycle View</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Publish</th>
+      <th>Published</th>
+      <th>Genre</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @book.each do |book| %>
+      <tr  >
+        <td style="background-color: <%= cycle('#FFffFF','#FFff99')%>"><%= book.title %></td>
+        <td style="background-color: <%= %>"><%= book.price %></td>
+        <td style="background-color: <%= current_cycle%>"><%= book.publish %></td>
+        <td><%= book.published %></td>
+        <td><%= book.genre %></td>
+        <td><%= link_to 'Show', book_path(@book) %></td>
+        <td><%= link_to 'Edit', edit_book_path(@book) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

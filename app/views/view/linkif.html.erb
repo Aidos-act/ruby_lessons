@@ -1,0 +1,6 @@
+<% #@user = User() %>
+<%= link_to_if @user.nil?, 'Login' %>
+<%= link_to_unless @user, 'Login' %>
+<%= link_to_if @user.nil?, 'Login', controller: :login, action: :index do |name|
+	link_to 'My Page', controller: :login, action: :info
+end %>

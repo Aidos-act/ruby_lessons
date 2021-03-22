@@ -1,0 +1,7 @@
+<% msg = 'Rails is frameworks of Ruby. In the frameworks there is, Catalyst and symfony.' %>
+
+<ul>
+	<li><%= excerpt(msg, 'Catalyst', radius: 10) %></li>
+	<li><%= excerpt(msg, 'Rails', radius:50)%></li>
+	<li><%= excerpt(msg, 'Catalyst', radius:10, omission: '~') %></li>
+</ul>

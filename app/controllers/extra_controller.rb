@@ -1,0 +1,2 @@
+class ExtraController < ApplicationController
+end

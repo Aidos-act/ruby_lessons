@@ -1,0 +1,17 @@
+ <%= simple_form_for([@book, @book.reviews.build]) do |form| %> 
+  <div class="field">
+    <%= form.input :user_id , label: "User"%>
+  </div>
+
+  <div class="field">
+    <%= form.input :status , label: "Status" %>
+  </div>
+
+  <div class="field">
+    <%= form.input :body , label: "Body" %>
+  </div>
+
+  <div class="actions">
+    <%= form.button :submit , :class => "btn-custom" %>
+  </div>
+<% end %>

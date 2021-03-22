@@ -1,0 +1,19 @@
+ <% i = 0 %>
+ <% @books.each do |book| %>
+ 	<% i=i+1 %>
+
+
+<div >
+	<h1><%= i %>: <%= book.title %></h1>
+	<p>by <%= book.publish %> </p><br/>
+	<p>	Price: <%= book.price %> <br/>
+	Published date: <%= book.published %> <br/>
+	</p>
+
+</div>
+<hr/>
+
+
+
+
+<% end %> 

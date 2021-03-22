@@ -1,0 +1,15 @@
+<ul>
+
+<li><%= number_to_currency(12345) %></li>
+<li><%= number_to_currency(12345, unit: '円' , precision: 0, format: '%n%u') %></li>
+<li><%= number_to_human(1234567) %></li>
+<li><%= number_to_human(1234567, units: { unit: "", million: "Miles"}) %></li>
+<li><%= number_to_human_size(123456) %></li>
+<li><%= number_to_percentage(12.3456) %></li>
+<li><%= number_with_delimiter(1234567.89 , delmiter: " ", seperator: ",")%></li>
+<li><%= number_with_precision(123.4567) %></li>
+<li><%= number_with_precision(123.4567, precision: 5) %></li>
+<li><%= number_with_precision(123.4567, precision: 5, significant: true) %></li>
+<li><%= number_with_precision(123.4, precision: 5, strip_insignificant_zeros: true) %></li>
+
+</ul>
